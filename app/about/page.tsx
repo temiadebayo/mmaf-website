@@ -11,7 +11,7 @@ export default function AboutPage() {
       <section className="relative min-h-[70vh] flex items-center overflow-hidden">
         <img
           src="https://images.unsplash.com/flagged/photo-1555251255-e9a095d6eb9d?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1740"
-          alt="Community"
+          alt="Community - African community"
           className="absolute inset-0 h-full w-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/80" />
@@ -42,7 +42,7 @@ export default function AboutPage() {
               viewport={{ once: true }}
               className="space-y-6"
             >
-              <div className="inline-flex items-center gap-2 text-red-600 font-semibold mb-4">
+              <div className="inline-flex items-center gap-2 text-brand-black font-semibold mb-4">
                 <Calendar className="w-5 h-5" />
                 <span>Established October 13, 2021</span>
               </div>
@@ -55,8 +55,8 @@ export default function AboutPage() {
                   aspect of human dignity.
                 </p>
                 <p>
-                  Over four transformative years, we've reached <strong className="text-red-600">320,625 lives</strong> 
-                  and invested <strong className="text-red-600">₦175,751,904</strong> across programs that create 
+                  Over four transformative years, we've reached <strong className="text-brand-black font-bold">320,625 lives</strong> 
+                  and invested <strong className="text-brand-black font-bold">₦175,751,904</strong> across programs that create 
                   lasting change—not just aid, but empowerment.
                 </p>
               </div>
@@ -69,7 +69,7 @@ export default function AboutPage() {
             >
               <img
                 src="/src/assets/images/about-1.jpg"
-                alt="Community impact"
+                alt="Community impact - African community"
                 className="w-full h-[500px] object-cover"
               />
             </motion.div>
@@ -103,8 +103,8 @@ export default function AboutPage() {
                 transition={{ delay: idx * 0.1 }}
                 className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow"
               >
-                <div className="w-14 h-14 rounded-full bg-red-100 flex items-center justify-center mb-4">
-                  <value.icon className="w-7 h-7 text-red-600" />
+                <div className="w-14 h-14 rounded-full bg-gray-100 flex items-center justify-center mb-4">
+                  <value.icon className="w-7 h-7 text-brand-black" />
                 </div>
                 <h3 className="text-2xl font-bold mb-3">{value.title}</h3>
                 <p className="text-gray-600">{value.desc}</p>

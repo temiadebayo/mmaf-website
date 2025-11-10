@@ -12,8 +12,8 @@ export default function ProgramsPage() {
       {/* Hero Section */}
       <section className="relative min-h-[60vh] flex items-center overflow-hidden">
         <img
-          src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=2084&auto=format&fit=crop"
-          alt="Programs"
+          src="/src/assets/images/programs-1.jpg"
+          alt="Programs - African community"
           className="absolute inset-0 h-full w-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/80" />
@@ -53,7 +53,7 @@ export default function ProgramsPage() {
           </motion.div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             {programs.map((program, index) => (
-              <ProgramCard key={index} {...program} />
+              <ProgramCard key={index} {...program} programId={`program-${index + 1}`} />
             ))}
           </div>
         </div>

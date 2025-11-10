@@ -18,7 +18,7 @@ export const pillarsData = [
     outputs: [
       '500 medical treatments supported',
       '10 active facility partnerships',
-      '400 women enrolled annually under EWHI',
+      '200 women enrolled annually under EWHI',
       '2 community health outreaches per year'
     ]
   },
@@ -135,14 +135,14 @@ export const programs = [
     title: 'Prescription Medication',
     description: 'Restoring Health, Sustaining Hope',
     beneficiaries: '515 patients',
-    investment: '£23,979',
+    investment: '₦45,000,000',
     impact: '76,868 tablets distributed for thyroid treatment'
   },
   {
     title: 'Women\'s Health Initiative',
     description: 'Because Every Woman Deserves Care',
     beneficiaries: '208 women',
-    investment: '₦9.36 million',
+    investment: '₦9,360,000',
     impact: 'Health insurance coverage and 89 healthcare encounters'
   },
   {

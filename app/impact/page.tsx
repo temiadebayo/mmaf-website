@@ -1,7 +1,8 @@
 'use client';
 
+import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { Heart, TrendingUp, Award } from 'lucide-react';
+import { Heart, TrendingUp, Award, ArrowRight } from 'lucide-react';
 import StatsSection from '@/components/StatsSection';
 import { programs } from '@/lib/data';
 
@@ -11,8 +12,8 @@ export default function ImpactPage() {
       {/* Hero Section */}
       <section className="relative min-h-[70vh] flex items-center overflow-hidden">
         <img
-          src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?q=80&w=1974&auto=format&fit=crop"
-          alt="Impact"
+          src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?q=80&w=2070&auto=format&fit=crop"
+          alt="Impact - African community"
           className="absolute inset-0 h-full w-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/80" />
@@ -61,9 +62,9 @@ export default function ImpactPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.1 }}
-                className="text-center p-8 bg-gradient-to-br from-red-50 to-orange-50 rounded-2xl"
+                className="text-center p-8 bg-gray-50 rounded-2xl border-2 border-gray-200"
               >
-                <div className="w-16 h-16 rounded-full bg-red-600 flex items-center justify-center mx-auto mb-4">
+                <div className="w-16 h-16 rounded-full bg-brand-black flex items-center justify-center mx-auto mb-4">
                   <stat.icon className="w-8 h-8 text-white" />
                 </div>
                 <div className="text-4xl font-black text-gray-900 mb-2">{stat.value}</div>
@@ -76,31 +77,64 @@ export default function ImpactPage() {
           {/* Impact Gallery */}
           <div className="grid md:grid-cols-2 gap-6">
             {[
-              { img: 'https://images.unsplash.com/photo-1551076805-e1869033e561?q=80&w=2069&auto=format&fit=crop', title: 'Health & Wellness', desc: 'Medical interventions and health programs' },
-              { img: 'https://images.unsplash.com/photo-1559027615-cd4628902d4a?q=80&w=1974&auto=format&fit=crop', title: 'Education & Empowerment', desc: 'Scholarships and learning opportunities' },
-              { img: 'https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=1974&auto=format&fit=crop', title: 'Food Security', desc: 'Meals served with dignity' },
-              { img: 'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=2084&auto=format&fit=crop', title: 'Community Building', desc: 'Strengthening communities together' }
-            ].map((item, idx) => (
-              <motion.div
-                key={item.title}
-                initial={{ opacity: 0, scale: 0.95 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: idx * 0.1 }}
-                className="relative overflow-hidden rounded-2xl group h-64"
-              >
-                <img
-                  src={item.img}
-                  alt={item.title}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
-                <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                  <h3 className="text-2xl font-black mb-2">{item.title}</h3>
-                  <p className="text-white/90">{item.desc}</p>
-                </div>
-              </motion.div>
-            ))}
+              { 
+                img: 'https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?q=80&w=2070&auto=format&fit=crop', 
+                title: 'Health & Wellness Report', 
+                desc: 'Medical interventions and health programs',
+                reportId: 'health-wellness-2024',
+                color: 'lafiya'
+              },
+              { 
+                img: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=2070&auto=format&fit=crop', 
+                title: 'Education & Empowerment Report', 
+                desc: 'Scholarships and learning opportunities',
+                reportId: 'education-empowerment-2024',
+                color: 'ilimi'
+              },
+              { 
+                img: 'https://images.unsplash.com/photo-1511632765486-a01980e01a18?q=80&w=2070&auto=format&fit=crop', 
+                title: 'Food Security Report', 
+                desc: 'Meals served with dignity',
+                reportId: 'food-security-2024',
+                color: 'sadaqqah'
+              },
+              { 
+                img: 'https://images.unsplash.com/photo-1511632765486-a01980e01a18?q=80&w=2070&auto=format&fit=crop', 
+                title: 'Community Building Report', 
+                desc: 'Strengthening communities together',
+                reportId: 'community-building-2024',
+                color: 'anoora'
+              }
+            ].map((item, idx) => {
+              const colorClass = item.color === 'sadaqqah' ? 'text-sadaqqah' : 
+                                 item.color === 'lafiya' ? 'text-lafiya' : 
+                                 item.color === 'ilimi' ? 'text-ilimi' : 'text-brand-black';
+              return (
+                <Link key={item.title} href={`/impact/${item.reportId}`}>
+                  <motion.div
+                    initial={{ opacity: 0, scale: 0.95 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: idx * 0.1 }}
+                    className="relative overflow-hidden rounded-2xl group h-64 cursor-pointer"
+                  >
+                    <img
+                      src={item.img}
+                      alt={item.title}
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
+                    <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+                      <h3 className="text-2xl font-black mb-2 group-hover:underline">{item.title}</h3>
+                      <p className="text-white/90 mb-2">{item.desc}</p>
+                      <p className={`${colorClass} text-sm font-semibold flex items-center gap-2`}>
+                        View Full Report <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                      </p>
+                    </div>
+                  </motion.div>
+                </Link>
+              );
+            })}
           </div>
         </div>
       </section>

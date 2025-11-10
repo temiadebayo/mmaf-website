@@ -4,9 +4,9 @@ import { pillarsData } from '@/lib/data';
 export default function PillarsPage() {
   return (
     <>
-      <section className="bg-gradient-to-br from-red-50 to-orange-50 py-20">
+      <section className="bg-gray-50 py-20">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-red-600 to-orange-500 bg-clip-text text-transparent">
+          <h1 className="text-5xl font-bold mb-6 text-brand-black">
             MMAF Pillars
           </h1>
           <p className="text-xl text-gray-700">
@@ -26,6 +26,7 @@ export default function PillarsPage() {
                 description={pillar.description}
                 icon={pillar.icon}
                 href={`/pillars/${pillar.id}`}
+                pillarId={pillar.id}
               />
             ))}
           </div>

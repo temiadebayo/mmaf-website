@@ -7,7 +7,16 @@ const config: Config = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'brand-black': '#000000',
+        'brand-white': '#ffffff',
+        'sadaqqah': '#f05c25',
+        'lafiya': '#46a948',
+        'ilimi': '#2b79bd',
+        'anoora': '#000000',
+      },
+    },
   },
   plugins: [],
 };
