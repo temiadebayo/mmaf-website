@@ -140,7 +140,7 @@ export default function DonatePage() {
               href={`mailto:${contactInfo.email}?subject=Donation Inquiry`}
               className="inline-flex items-center justify-center gap-2 bg-white text-red-600 hover:bg-gray-100 font-bold px-10 py-5 rounded-lg text-lg transition-all hover:scale-105"
             >
-              <HandHeart className="w-6 h-6" /> Get Started <ArrowRight className="w-5 h-5" />
+              <HeartHandshake className="w-6 h-6" /> Get Started <ArrowRight className="w-5 h-5" />
             </a>
           </motion.div>
         </div>
