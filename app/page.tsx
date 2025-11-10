@@ -14,7 +14,7 @@ export default function Home() {
       {/* HERO - Cinematic NGO Storytelling */}
       <section className="relative min-h-[90vh] flex items-center overflow-hidden">
         <img
-          src="/hero-community.jpg"
+          src="src/assets/images/hero-community.jpg"
           alt="MMAF Community - Changing lives together"
           className="absolute inset-0 h-full w-full object-cover"
         />
@@ -28,7 +28,7 @@ export default function Home() {
             className="max-w-3xl"
           >
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-black leading-tight text-white">
-              Changing Narratives. Building Bridges. Restoring Dignity.
+              Changing Narratives.<br />Building Bridges.<br />
             </h1>
             <motion.div
               initial={{ opacity: 0, y: 10 }}
@@ -98,10 +98,10 @@ export default function Home() {
                     pillar.id === 'lafiya'
                       ? 'https://images.unsplash.com/photo-1551076805-e1869033e561?q=80&w=2069&auto=format&fit=crop'
                       : pillar.id === 'ilimi'
-                      ? 'https://images.unsplash.com/photo-1559027615-5ecf9fa6f7f6?q=80&w=1974&auto=format&fit=crop'
+                      ? 'https://images.unsplash.com/photo-1567057419565-4349c49d8a04?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1744'
                       : pillar.id === 'sadaqqah'
-                      ? 'https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=1974&auto=format&fit=crop'
-                      : 'https://images.unsplash.com/photo-1495578942200-c5f5d2137f5f?q=80&w=1974&auto=format&fit=crop'
+                      ? 'https://images.unsplash.com/photo-1591503049013-993ae5cf7e7c?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1335'
+                      : 'https://images.unsplash.com/photo-1660675133902-acd1b057f75d?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1740p'
                   }
                   alt={pillar.title}
                   className="h-72 w-full object-cover transition-transform duration-500 group-hover:scale-105"
@@ -143,7 +143,7 @@ export default function Home() {
       {/* Big CTA */}
       <section className="relative overflow-hidden">
         <img
-          src="https://images.unsplash.com/photo-1588072432836-e10032774350?q=80&w=1974&auto=format&fit=crop"
+          src="https://images.unsplash.com/photo-1603998382124-c9835bf50409?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1740"
           alt="Volunteer"
           className="absolute inset-0 h-full w-full object-cover"
         />
@@ -165,7 +165,7 @@ export default function Home() {
             </div>
             <div className="rounded-2xl overflow-hidden border border-white/10">
               <img
-                src="https://images.unsplash.com/photo-1526256262350-7da7584cf5eb?q=80&w=1974&auto=format&fit=crop"
+                src="https://images.unsplash.com/photo-1546188994-07c34f6e5e1b?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1742"
                 alt="Community work"
                 className="w-full h-80 object-cover"
               />
