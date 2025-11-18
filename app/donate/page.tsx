@@ -2,40 +2,9 @@
 
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { HeartHandshake, Heart, Gift, ArrowRight, CheckCircle, CreditCard, Building2, Copy, Check } from 'lucide-react';
+import { HeartHandshake, Heart, Gift, ArrowRight, CheckCircle, Building2, Copy, Check } from 'lucide-react';
 import StatsSection from '@/components/StatsSection';
 import { contactInfo } from '@/lib/data';
-
-const donationPlans = [
-  {
-    name: 'Supporter',
-    amount: '₦5,000',
-    period: 'One-time',
-    description: 'Help feed a family for a week',
-    features: ['Direct impact on families', 'Tax-deductible receipt', 'Impact report']
-  },
-  {
-    name: 'Champion',
-    amount: '₦25,000',
-    period: 'Monthly',
-    description: 'Support ongoing health programs',
-    features: ['Monthly impact updates', 'Tax-deductible receipts', 'Special recognition', 'Annual impact report']
-  },
-  {
-    name: 'Advocate',
-    amount: '₦50,000',
-    period: 'Monthly',
-    description: 'Sponsor education for students',
-    features: ['Priority impact updates', 'Tax-deductible receipts', 'Donor recognition', 'Quarterly reports', 'Invitation to events']
-  },
-  {
-    name: 'Visionary',
-    amount: '₦100,000',
-    period: 'Monthly',
-    description: 'Transform lives at scale',
-    features: ['All Advocate benefits', 'Personal impact stories', 'Direct program updates', 'Exclusive events', 'Naming opportunities']
-  }
-];
 
 const bankDetails = {
   bankName: 'Access Bank',
@@ -62,7 +31,7 @@ export default function DonatePage() {
           alt="Donate - African community"
           className="absolute inset-0 h-full w-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black/80" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-black/50" />
         <div className="relative z-10 max-w-7xl mx-auto px-4 w-full text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -99,7 +68,7 @@ export default function DonatePage() {
 
       <StatsSection />
 
-      {/* Donation Plans Section */}
+      {/* Payment Options Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
           <motion.div
@@ -108,53 +77,18 @@ export default function DonatePage() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-4">Choose Your Impact</h2>
+            <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-4">Payment Options</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Select a donation plan that aligns with your giving goals
+              Choose your preferred payment method to make a donation
             </p>
           </motion.div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-            {donationPlans.map((plan, index) => (
-              <motion.div
-                key={plan.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="bg-white border-2 border-gray-200 rounded-2xl p-6 hover:border-brand-black hover:shadow-xl transition-all group"
-              >
-                <div className="text-center mb-6">
-                  <h3 className="text-2xl font-black text-gray-900 mb-2">{plan.name}</h3>
-                  <div className="mb-2">
-                    <span className="text-4xl font-black text-brand-black">{plan.amount}</span>
-                    {plan.period !== 'One-time' && (
-                      <span className="text-gray-600 text-sm">/{plan.period}</span>
-                    )}
-                  </div>
-                  <p className="text-gray-600 text-sm">{plan.description}</p>
-                </div>
-                <ul className="space-y-3 mb-6">
-                  {plan.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-start gap-2">
-                      <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
-                      <span className="text-sm text-gray-700">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-                <button className="w-full bg-brand-black hover:bg-gray-900 text-white font-bold py-3 px-6 rounded-lg transition-all group-hover:scale-105">
-                  Donate Now
-                </button>
-              </motion.div>
-            ))}
-          </div>
 
           {/* Bank Transfer Option */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl p-8 border-2 border-gray-200"
+            className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl p-8 border-2 border-gray-200 max-w-3xl mx-auto"
           >
             <div className="flex items-center gap-4 mb-6">
               <div className="w-16 h-16 rounded-full bg-brand-black flex items-center justify-center">
@@ -300,7 +234,7 @@ export default function DonatePage() {
               alt="Impact - African community"
               className="w-full h-96 object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent" />
             <div className="absolute bottom-0 left-0 right-0 p-10 text-white">
               <h3 className="text-3xl font-black mb-4">Your Donation in Action</h3>
               <div className="grid md:grid-cols-3 gap-6">

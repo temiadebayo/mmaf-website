@@ -57,6 +57,7 @@ export default function Header() {
     },
     {
       label: 'About',
+      href: '/about',
       dropdown: [
         { label: 'Our Story', href: '/about', description: 'Learn about our journey', icon: FileText },
         { label: 'Mission & Vision', href: '/about#mission', description: 'Our core values', icon: Heart },
@@ -65,6 +66,7 @@ export default function Header() {
     },
     {
       label: 'Pillars',
+      href: '/pillars',
       dropdown: pillarsData.map(pillar => ({
         label: pillar.title,
         href: `/pillars/${pillar.id}`,
@@ -75,6 +77,7 @@ export default function Header() {
     },
     {
       label: 'Programs',
+      href: '/programs',
       dropdown: [
         { label: 'All Programs', href: '/programs', description: 'View all programs', icon: FileText },
         { label: 'Sadaqqah Program', href: '/programs/program-1', description: 'Feeding with dignity', icon: Utensils },
@@ -85,6 +88,7 @@ export default function Header() {
     },
     {
       label: 'Impact',
+      href: '/impact',
       dropdown: [
         { label: 'Overview', href: '/impact', description: 'See our overall impact', icon: FileText },
         { label: 'Health & Wellness Report', href: '/impact/health-wellness-2024', description: 'Medical interventions', icon: Heart },
@@ -95,6 +99,7 @@ export default function Header() {
     },
     {
       label: 'Events',
+      href: '/events',
       dropdown: [
         { label: 'All Events', href: '/events', description: 'View all events', icon: Calendar },
         { label: 'Launch Ceremony', href: '/events', description: '27th November, 2025', icon: Calendar },
@@ -104,6 +109,7 @@ export default function Header() {
     },
     {
       label: 'Resources',
+      href: '/resources',
       dropdown: [
         { label: 'Annual Reports', href: '#', description: 'Download our reports', icon: FileText },
         { label: 'Blog', href: '#', description: 'Latest news & updates', icon: FileText },
@@ -112,6 +118,7 @@ export default function Header() {
     },
     {
       label: 'Contact',
+      href: '/contact',
       dropdown: [
         { label: 'Get in Touch', href: '/contact', description: 'Send us a message', icon: Mail },
         { label: 'Email Us', href: 'mailto:hereforyou@missmfoundation.com', description: 'hereforyou@missmfoundation.com', icon: Mail },
@@ -189,78 +196,66 @@ export default function Header() {
         }`}
         ref={navRef}
       >
-        <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <nav className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-8">
           <div 
-            className="flex items-center justify-between h-24"
+            className="flex items-center justify-between h-20 md:h-24 lg:h-28"
             onMouseEnter={() => itemsWithDropdowns.length > 0 && setShowMegaMenu(true)}
             onMouseLeave={() => setShowMegaMenu(false)}
           >
             {/* Logo */}
             <Link 
               href="/" 
-              className="flex items-center space-x-3 group z-50 pr-8"
+              className="flex items-center group z-50 flex-shrink-0 pr-6 lg:pr-8"
               onMouseEnter={() => setShowMegaMenu(false)}
             >
               <img 
                 src="src/assets/images/logo.png" 
                 alt="MMAF" 
-                className="h-16 md:h-20 w-auto object-contain transition-transform group-hover:scale-105" 
+                className="h-20 md:h-24 lg:h-14 w-auto object-contain transition-transform group-hover:scale-105" 
               />
             </Link>
 
-            {/* Desktop Navigation */}
-            <div className="hidden lg:flex items-center space-x-8">
-              {navItems.map((item) => {
-                const isActive = isNavItemActive(item);
-                return item.href ? (
-                  <Link
-                    key={item.label}
-                    href={item.href}
-                    className={`px-4 py-2 font-medium text-base transition-colors relative ${
-                      isActive 
-                        ? 'text-brand-black font-semibold' 
-                        : 'text-gray-700 hover:text-brand-black'
-                    }`}
-                    onMouseEnter={() => item.dropdown && setShowMegaMenu(true)}
-                  >
-                    {item.label}
-                    {isActive && (
-                      <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-brand-black"></span>
-                    )}
-                  </Link>
-                ) : (
-                  <div
-                    key={item.label}
-                    className={`px-4 py-2 font-medium text-base transition-colors cursor-pointer relative ${
-                      isActive 
-                        ? 'text-brand-black font-semibold' 
-                        : 'text-gray-700 hover:text-brand-black'
-                    }`}
-                    onMouseEnter={() => item.dropdown && setShowMegaMenu(true)}
-                  >
-                    {item.label}
-                    {isActive && (
-                      <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-brand-black"></span>
-                    )}
-                  </div>
-                );
-              })}
+            {/* Desktop Navigation - Scrollable on medium screens */}
+            <div className="hidden md:flex items-center flex-1 overflow-x-auto scrollbar-hide">
+              <div className="flex items-center space-x-1 lg:space-x-1.5 min-w-max">
+                {navItems.map((item) => {
+                  const isActive = isNavItemActive(item);
+                  return (
+                    <Link
+                      key={item.label}
+                      href={item.href || '#'}
+                      className={`px-2 lg:px-2.5 py-2 font-medium text-sm lg:text-base transition-all relative whitespace-nowrap rounded-md ${
+                        isActive 
+                          ? 'text-brand-black font-bold bg-brand-black/5' 
+                          : 'text-gray-700 hover:text-brand-black hover:bg-gray-100'
+                      }`}
+                      onMouseEnter={() => item.dropdown && setShowMegaMenu(true)}
+                    >
+                      {item.label}
+                      {isActive && (
+                        <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-8 h-1 bg-brand-black rounded-full"></span>
+                      )}
+                    </Link>
+                  );
+                })}
 
-              {/* Donate Button */}
-              <Link
-                href="/donate"
-                className="ml-6 flex items-center space-x-2 bg-brand-black hover:bg-gray-900 text-brand-white font-semibold px-8 py-3 rounded-lg shadow-lg hover:shadow-xl transition-all hover:scale-105"
-                onMouseEnter={() => setShowMegaMenu(false)}
-              >
-                <Heart className="w-5 h-5" />
-                <span>Donate</span>
-              </Link>
+                {/* Donate Button */}
+                <Link
+                  href="/donate"
+                  className="ml-2 lg:ml-2.5 flex items-center space-x-2 bg-brand-black hover:bg-gray-900 text-brand-white font-semibold px-4 lg:px-5 py-2.5 lg:py-3 rounded-lg shadow-lg hover:shadow-xl transition-all hover:scale-105 whitespace-nowrap flex-shrink-0"
+                  onMouseEnter={() => setShowMegaMenu(false)}
+                >
+                  <Heart className="w-4 h-4 lg:w-5 lg:h-5" />
+                  <span className="text-sm lg:text-base">Donate</span>
+                </Link>
+              </div>
             </div>
 
             {/* Mobile Menu Button */}
             <button
-              className="lg:hidden p-2 text-gray-700 hover:text-brand-black transition-colors"
+              className="md:hidden p-2 text-gray-700 hover:text-brand-black transition-colors flex-shrink-0 ml-2"
               onClick={() => setIsOpen(!isOpen)}
+              aria-label="Toggle menu"
             >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -274,9 +269,9 @@ export default function Header() {
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
-              className="lg:hidden overflow-hidden border-t border-gray-200"
+              className="md:hidden overflow-hidden border-t border-gray-200 max-h-[calc(100vh-5rem)] overflow-y-auto"
             >
-              <div className="py-4 space-y-2">
+              <div className="py-4 space-y-1">
                 {navItems.map((item) => {
                   const isActive = isNavItemActive(item);
                   return (
@@ -285,8 +280,8 @@ export default function Header() {
                       href={item.href || '#'}
                       className={`block px-6 py-3 font-medium transition-colors ${
                         isActive
-                          ? 'bg-brand-black/10 text-brand-black font-semibold border-l-4 border-brand-black'
-                          : 'text-gray-700 hover:bg-gray-50 hover:text-brand-black'
+                          ? 'bg-brand-black text-brand-white font-bold border-l-4 border-brand-black shadow-sm'
+                          : 'text-gray-700 hover:bg-gray-100 hover:text-brand-black'
                       }`}
                       onClick={() => setIsOpen(false)}
                     >
@@ -319,50 +314,50 @@ export default function Header() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3 }}
-            className="fixed top-24 left-0 w-full bg-white border-t border-gray-200 shadow-2xl z-40"
+            className="fixed top-20 md:top-24 lg:top-28 left-0 w-full bg-white border-t border-gray-200 shadow-2xl z-40 max-h-[calc(100vh-5rem)] md:max-h-[calc(100vh-6rem)] lg:max-h-[calc(100vh-7rem)] overflow-y-auto"
             onMouseEnter={() => setShowMegaMenu(true)}
             onMouseLeave={() => setShowMegaMenu(false)}
           >
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 relative">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12 relative">
               {/* Close Button */}
               <button
                 onClick={() => setShowMegaMenu(false)}
-                className="absolute top-4 right-4 p-2 text-gray-400 hover:text-brand-black hover:bg-gray-100 rounded-full transition-all"
+                className="absolute top-4 right-4 p-2 text-gray-400 hover:text-brand-black hover:bg-gray-100 rounded-full transition-all z-50"
                 aria-label="Close menu"
               >
-                <X className="w-6 h-6" />
+                <X className="w-5 h-5 md:w-6 md:h-6" />
               </button>
 
-              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-10">
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6 md:gap-8 lg:gap-10">
                 {itemsWithDropdowns.map((item) => (
-                  <div key={item.label} className="space-y-4">
-                    <h3 className="text-lg font-bold text-brand-black mb-5 pb-3 border-b-2 border-brand-black uppercase tracking-wide">
+                  <div key={item.label} className="space-y-3 md:space-y-4">
+                    <h3 className="text-base md:text-lg font-bold text-brand-black mb-3 md:mb-5 pb-2 md:pb-3 border-b-2 border-brand-black uppercase tracking-wide">
                       {item.label}
                     </h3>
-                    <div className="space-y-4">
+                    <div className="space-y-3 md:space-y-4">
                       {item.dropdown?.map((dropdownItem, index) => {
                         const IconComponent = dropdownItem.icon || ArrowRight;
                         return (
                           <Link
                             key={index}
                             href={dropdownItem.href}
-                            className="group flex items-start space-x-4 p-3 rounded-lg hover:bg-gray-50 transition-all"
+                            className="group flex items-start space-x-3 md:space-x-4 p-2 md:p-3 rounded-lg hover:bg-gray-50 transition-all"
                             onClick={() => setShowMegaMenu(false)}
                           >
                             <div 
-                              className="mt-0.5 p-2.5 rounded-lg flex-shrink-0"
+                              className="mt-0.5 p-2 md:p-2.5 rounded-lg flex-shrink-0"
                               style={{
                                 backgroundColor: dropdownItem.color ? `${dropdownItem.color}15` : '#f3f4f6',
                               }}
                             >
                               <IconComponent 
-                                className="w-5 h-5" 
+                                className="w-4 h-4 md:w-5 md:h-5" 
                                 style={{ color: dropdownItem.color || '#000000' }} 
                               />
                             </div>
                             <div className="flex-1 min-w-0">
                               <div 
-                                className="font-semibold text-base text-gray-900 group-hover:text-brand-black transition-colors mb-1.5"
+                                className="font-semibold text-sm md:text-base text-gray-900 group-hover:text-brand-black transition-colors mb-1 md:mb-1.5"
                                 style={{
                                   color: dropdownItem.color || undefined
                                 }}
@@ -370,7 +365,7 @@ export default function Header() {
                                 {dropdownItem.label}
                               </div>
                               {dropdownItem.description && (
-                                <div className="text-sm text-gray-500 leading-relaxed">
+                                <div className="text-xs md:text-sm text-gray-500 leading-relaxed">
                                   {dropdownItem.description}
                                 </div>
                               )}
