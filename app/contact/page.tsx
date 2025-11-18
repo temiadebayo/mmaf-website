@@ -23,7 +23,7 @@ export default function ContactPage() {
       {/* Hero Section */}
       <section className="relative min-h-[60vh] flex items-center overflow-hidden">
         <img
-          src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?q=80&w=2070&auto=format&fit=crop"
+          src="/src/assets/images/programs-1.jpg"
           alt="Contact - African community"
           className="absolute inset-0 h-full w-full object-cover"
         />

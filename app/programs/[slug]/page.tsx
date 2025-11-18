@@ -15,9 +15,12 @@ export default function ProgramDetailPage({ params }: { params: { slug: string }
   }
 
   const programImages = [
-    'https://images.unsplash.com/photo-1511632765486-a01980e01a18?q=80&w=2070&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?q=80&w=2070&auto=format&fit=crop',
-    'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=2070&auto=format&fit=crop',
+    '/src/assets/images/programs-1.jpg',
+    '/src/assets/images/programs-2.jpg',
+    '/src/assets/images/programs-3.jpg',
+    '/src/assets/images/programs-4.jpg',
+    '/src/assets/images/programs-5.jpg',
+    '/src/assets/images/programs-6.jpg',
   ];
 
   return (

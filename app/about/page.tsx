@@ -10,7 +10,7 @@ export default function AboutPage() {
       {/* Hero Section */}
       <section className="relative min-h-[70vh] flex items-center overflow-hidden">
         <img
-          src="https://images.unsplash.com/flagged/photo-1555251255-e9a095d6eb9d?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1740"
+          src="/src/assets/images/about-1.jpg"
           alt="Community - African community"
           className="absolute inset-0 h-full w-full object-cover"
         />
@@ -68,7 +68,7 @@ export default function AboutPage() {
               className="relative rounded-2xl overflow-hidden shadow-2xl"
             >
               <img
-                src="/src/assets/images/about-1.jpg"
+                src="/src/assets/images/impact-1.jpg"
                 alt="Community impact - African community"
                 className="w-full h-[500px] object-cover"
               />

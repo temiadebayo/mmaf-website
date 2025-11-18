@@ -15,17 +15,28 @@ interface ProgramCardProps {
 }
 
 const programImages = [
-  'https://images.unsplash.com/photo-1511632765486-a01980e01a18?q=80&w=2070&auto=format&fit=crop',
-  'https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?q=80&w=2070&auto=format&fit=crop',
-  'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=2070&auto=format&fit=crop',
-  'https://images.unsplash.com/photo-1511632765486-a01980e01a18?q=80&w=2070&auto=format&fit=crop',
-  'https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?q=80&w=2070&auto=format&fit=crop',
-  'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=2070&auto=format&fit=crop',
-  'https://images.unsplash.com/photo-1511632765486-a01980e01a18?q=80&w=2070&auto=format&fit=crop'
+  '/src/assets/images/sadaqqah.jpg',
+  'https://images.unsplash.com/photo-1648224395331-06117e433549?q=80&w=2685&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+  '/src/assets/images/orphanage.jpg',
+  'https://images.unsplash.com/photo-1589483232748-515c025575bc?q=80&w=2673&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+  'https://images.unsplash.com/photo-1631980838946-755ba8443ab7?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+  '/src/assets/images/about-1.jpg',
+  'https://images.unsplash.com/photo-1491841550275-ad7854e35ca6?q=80&w=2274&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
 ];
 
 export default function ProgramCard({ title, description, beneficiaries, investment, impact, imageUrl, programId }: ProgramCardProps) {
-  const img = imageUrl || programImages[Math.floor(Math.random() * programImages.length)];
+  // Use programId to get a consistent image index, or fallback to 0
+  const getImageIndex = () => {
+    if (programId) {
+      // Extract number from programId (e.g., "program-1" -> 1)
+      const match = programId.match(/\d+/);
+      if (match) {
+        return (parseInt(match[0]) - 1) % programImages.length;
+      }
+    }
+    return 0;
+  };
+  const img = imageUrl || programImages[getImageIndex()];
   const slug = programId || title.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
   
   return (

@@ -18,7 +18,7 @@ const reports: Record<string, {
     title: 'Health & Wellness Impact Report 2024',
     description: 'Comprehensive report on our health interventions, medical programs, and community wellness initiatives.',
     year: '2024',
-    image: 'https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?q=80&w=2070&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1526256262350-7da7584cf5eb?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     keyMetrics: [
       { label: 'Patients Treated', value: '199+' },
       { label: 'Women Enrolled', value: '200' },
@@ -37,7 +37,7 @@ const reports: Record<string, {
     title: 'Education & Empowerment Impact Report 2024',
     description: 'Detailed report on our educational programs, scholarships, and empowerment initiatives.',
     year: '2024',
-    image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=2070&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1532012197267-da84d127e765?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     keyMetrics: [
       { label: 'Scholarships Awarded', value: '150+' },
       { label: 'Students Supported', value: '150+' },
@@ -56,7 +56,7 @@ const reports: Record<string, {
     title: 'Food Security Impact Report 2024',
     description: 'Comprehensive report on our food security programs, feeding initiatives, and community nutrition efforts.',
     year: '2024',
-    image: 'https://images.unsplash.com/photo-1511632765486-a01980e01a18?q=80&w=2070&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1458917524587-d3236cc8c2c8?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     keyMetrics: [
       { label: 'Meals Served', value: '120,000+' },
       { label: 'Community Gardens', value: '20' },
@@ -75,7 +75,7 @@ const reports: Record<string, {
     title: 'Community Building Impact Report 2024',
     description: 'Detailed report on our community development initiatives, cultural programs, and social cohesion efforts.',
     year: '2024',
-    image: 'https://images.unsplash.com/photo-1511632765486-a01980e01a18?q=80&w=2070&auto=format&fit=crop',
+    image: '/src/assets/images/community_building.jpg',
     keyMetrics: [
       { label: 'Communities Reached', value: '50+' },
       { label: 'Cultural Events', value: '15+' },

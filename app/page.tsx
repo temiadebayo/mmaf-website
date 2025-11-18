@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { ArrowRight, HeartHandshake, Heart, Users, Play } from 'lucide-react';
+import { ArrowRight, HeartHandshake, Heart, Users, Play, FileText } from 'lucide-react';
 import PillarCard from '@/components/PillarCard';
 import TestimonialCard from '@/components/TestimonialCard';
 import StatsSection from '@/components/StatsSection';
@@ -50,8 +50,7 @@ export default function Home() {
               transition={{ delay: 0.2, duration: 0.6 }}
               className="mt-6 text-lg md:text-2xl text-gray-200 max-w-2xl"
             >
-              <p>We advance health, education, food security, and culture across Global Africa—
-              centering dignity, inclusion, and community power.</p>
+              <p>We advance health, education, food security, and culture across Global Africa centering dignity, inclusion, and community power.</p>
             </motion.div>
 
             <motion.div
@@ -60,11 +59,12 @@ export default function Home() {
               transition={{ delay: 0.35 }}
               className="mt-10 flex flex-col sm:flex-row gap-4"
             >
-              <Link href="/donate" className="inline-flex items-center justify-center gap-2 bg-brand-black hover:bg-gray-900 text-white font-semibold px-7 py-4 rounded-lg">
-                <Heart className="w-5 h-5" /> Donate Now <ArrowRight className="w-4 h-4" />
-              </Link>
+              
               <Link href="/about" className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white border border-white/30 backdrop-blur px-7 py-4 rounded-lg">
                 <Play className="w-5 h-5" /> Learn Our Story
+              </Link>
+              <Link href="/brochure.pdf" className="inline-flex items-center justify-center gap-2 bg-brand-black hover:bg-gray-900 text-white font-semibold px-7 py-4 rounded-lg">
+                <FileText className="w-5 h-5" /> Download Brochure <ArrowRight className="w-4 h-4" />
               </Link>
             </motion.div>
           </motion.div>
@@ -75,7 +75,7 @@ export default function Home() {
               <motion.div
                 key={s.label}
                 initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
+                animate={{ opacity: 1, y: 0 }}      
                 transition={{ delay: 0.25 + i*0.06 }}
                 className="rounded-xl bg-white/90 backdrop-blur shadow-sm p-4 text-center"
               >

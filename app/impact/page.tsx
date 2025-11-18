@@ -12,7 +12,7 @@ export default function ImpactPage() {
       {/* Hero Section */}
       <section className="relative min-h-[70vh] flex items-center overflow-hidden">
         <img
-          src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?q=80&w=2070&auto=format&fit=crop"
+          src="https://images.unsplash.com/photo-1603998382124-c9835bf50409?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1740"
           alt="Impact - African community"
           className="absolute inset-0 h-full w-full object-cover"
         />
@@ -78,28 +78,28 @@ export default function ImpactPage() {
           <div className="grid md:grid-cols-2 gap-6">
             {[
               { 
-                img: 'https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?q=80&w=2070&auto=format&fit=crop', 
+                img: 'https://images.unsplash.com/photo-1526256262350-7da7584cf5eb?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', 
                 title: 'Health & Wellness Report', 
                 desc: 'Medical interventions and health programs',
                 reportId: 'health-wellness-2024',
                 color: 'lafiya'
               },
               { 
-                img: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=2070&auto=format&fit=crop', 
+                img: 'https://images.unsplash.com/photo-1532012197267-da84d127e765?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', 
                 title: 'Education & Empowerment Report', 
                 desc: 'Scholarships and learning opportunities',
                 reportId: 'education-empowerment-2024',
                 color: 'ilimi'
               },
               { 
-                img: 'https://images.unsplash.com/photo-1511632765486-a01980e01a18?q=80&w=2070&auto=format&fit=crop', 
+                img: 'https://images.unsplash.com/photo-1458917524587-d3236cc8c2c8?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', 
                 title: 'Food Security Report', 
                 desc: 'Meals served with dignity',
                 reportId: 'food-security-2024',
                 color: 'sadaqqah'
               },
               { 
-                img: 'https://images.unsplash.com/photo-1511632765486-a01980e01a18?q=80&w=2070&auto=format&fit=crop', 
+                img: '/src/assets/images/community_building.jpg', 
                 title: 'Community Building Report', 
                 desc: 'Strengthening communities together',
                 reportId: 'community-building-2024',
