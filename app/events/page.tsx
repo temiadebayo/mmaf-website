@@ -7,20 +7,17 @@ const events = [
   {
     title: 'Launch Ceremony',
     date: '27th November, 2025',
-    description: 'Join us as we officially launch our latest initiatives and celebrate the foundation\'s growth and impact.',
-    image: 'https://images.unsplash.com/photo-1511632765486-a01980e01a18?q=80&w=2070&auto=format&fit=crop'
+    description: 'Join us as we officially launch our latest initiatives and celebrate the foundation\'s growth and impact.'
   },
   {
     title: '400 Women Enrollment',
     date: '2026',
-    description: 'A milestone event celebrating the enrollment of 400 women in our comprehensive health and empowerment programs.',
-    image: 'https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?q=80&w=2070&auto=format&fit=crop'
+    description: 'A milestone event celebrating the enrollment of 400 women in our comprehensive health and empowerment programs.'
   },
   {
     title: 'Anoora Club Annual Festival',
     date: '2026',
-    description: 'Celebrate African culture, heritage, and storytelling at our annual Anoora Club Festival featuring performances, exhibitions, and community gatherings.',
-    image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=2070&auto=format&fit=crop'
+    description: 'Celebrate African culture, heritage, and storytelling at our annual Anoora Club Festival featuring performances, exhibitions, and community gatherings.'
   }
 ];
 
@@ -30,7 +27,7 @@ export default function EventsPage() {
       {/* Hero Section */}
       <section className="relative min-h-[60vh] flex items-center overflow-hidden">
         <img
-          src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?q=80&w=2070&auto=format&fit=crop"
+          src="https://images.unsplash.com/photo-1649298173603-9c95aa950879?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           alt="Events - African community"
           className="absolute inset-0 h-full w-full object-cover"
         />
@@ -63,14 +60,6 @@ export default function EventsPage() {
                 transition={{ delay: index * 0.1 }}
                 className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all group"
               >
-                <div className="relative h-48 overflow-hidden">
-                  <img
-                    src={event.image}
-                    alt={event.title}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                </div>
                 <div className="p-6">
                   <div className="flex items-center gap-2 text-brand-black mb-3">
                     <Calendar className="w-5 h-5" />
