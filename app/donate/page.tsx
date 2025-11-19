@@ -27,7 +27,7 @@ export default function DonatePage() {
       {/* Hero Section */}
       <section className="relative min-h-[80vh] flex items-center overflow-hidden">
         <img
-          src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?q=80&w=2070&auto=format&fit=crop"
+          src="https://images.unsplash.com/photo-1675651151785-ae8d84eddbea?q=80&w=3156&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           alt="Donate - African community"
           className="absolute inset-0 h-full w-full object-cover"
         />
@@ -53,13 +53,13 @@ export default function DonatePage() {
                 href={`mailto:${contactInfo.email}?subject=Donation Inquiry`}
                 className="inline-flex items-center justify-center gap-2 bg-brand-black hover:bg-gray-900 text-white font-bold px-10 py-5 rounded-lg text-lg transition-all hover:scale-105"
               >
-                <Heart className="w-6 h-6" /> Donate Now <ArrowRight className="w-5 h-5" />
+                <Heart className="w-6 h-6" /> Support Our Cause <ArrowRight className="w-5 h-5" />
               </a>
               <a
                 href="/contact"
                 className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white border border-white/30 backdrop-blur px-10 py-5 rounded-lg text-lg"
               >
-                Learn More
+                Learn About Our Cause
               </a>
             </div>
           </motion.div>
@@ -230,7 +230,7 @@ export default function DonatePage() {
             className="relative overflow-hidden rounded-2xl"
           >
             <img
-              src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?q=80&w=2070&auto=format&fit=crop"
+              src="https://images.unsplash.com/photo-1504805572947-34fad45aed93?q=80&w=2607&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               alt="Impact - African community"
               className="w-full h-96 object-cover"
             />
