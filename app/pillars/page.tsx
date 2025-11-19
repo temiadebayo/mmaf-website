@@ -1,4 +1,5 @@
 import PillarCard from '@/components/PillarCard';
+import CTASection from '@/components/CTASection';
 import { pillarsData } from '@/lib/data';
 
 export default function PillarsPage() {
@@ -32,6 +33,9 @@ export default function PillarsPage() {
           </div>
         </div>
       </section>
+
+      {/* CTA Section */}
+      <CTASection />
     </>
   );
 }

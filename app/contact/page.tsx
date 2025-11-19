@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin } from 'lucide-react';
+import CTASection from '@/components/CTASection';
 import { contactInfo } from '@/lib/data';
 
 export default function ContactPage() {
@@ -146,6 +147,9 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
+
+      {/* CTA Section */}
+      <CTASection />
     </>
   );
 }

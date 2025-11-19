@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { Sparkles } from 'lucide-react';
 import ProgramCard from '@/components/ProgramCard';
 import StatsSection from '@/components/StatsSection';
+import CTASection from '@/components/CTASection';
 import { programs } from '@/lib/data';
 
 export default function ProgramsPage() {
@@ -58,6 +59,9 @@ export default function ProgramsPage() {
           </div>
         </div>
       </section>
+
+      {/* CTA Section */}
+      <CTASection />
     </>
   );
 }

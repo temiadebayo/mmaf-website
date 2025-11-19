@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import { Calendar, Heart, Target, Users } from 'lucide-react';
 import StatsSection from '@/components/StatsSection';
+import CTASection from '@/components/CTASection';
 
 export default function AboutPage() {
   return (
@@ -115,6 +116,9 @@ export default function AboutPage() {
       </section>
 
       <StatsSection />
+
+      {/* CTA Section */}
+      <CTASection />
     </>
   );
 }

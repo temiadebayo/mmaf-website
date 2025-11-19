@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation';
 import { motion } from 'framer-motion';
 import { Users, DollarSign, TrendingUp, ArrowLeft } from 'lucide-react';
 import Link from 'next/link';
+import CTASection from '@/components/CTASection';
 import { programs } from '@/lib/data';
 
 export default function ProgramDetailPage({ params }: { params: { slug: string } }) {
@@ -109,6 +110,9 @@ export default function ProgramDetailPage({ params }: { params: { slug: string }
           </motion.div>
         </div>
       </section>
+
+      {/* CTA Section */}
+      <CTASection />
     </>
   );
 }

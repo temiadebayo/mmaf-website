@@ -8,6 +8,7 @@ import TestimonialCard from '@/components/TestimonialCard';
 import StatsSection from '@/components/StatsSection';
 import ImpactCarousel from '@/components/ImpactCarousel';
 import NewsletterSection from '@/components/NewsletterSection';
+import CTASection from '@/components/CTASection';
 import TypewriterText from '@/components/TypewriterText';
 import { pillarsData, testimonials } from '@/lib/data';
 
@@ -207,6 +208,9 @@ export default function Home() {
 
       {/* Newsletter Subscription */}
       <NewsletterSection />
+
+      {/* CTA Section */}
+      <CTASection />
     </>
   );
 }

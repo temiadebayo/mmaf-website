@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Heart, TrendingUp, Award, ArrowRight } from 'lucide-react';
 import StatsSection from '@/components/StatsSection';
+import CTASection from '@/components/CTASection';
 import { programs } from '@/lib/data';
 
 export default function ImpactPage() {
@@ -138,6 +139,9 @@ export default function ImpactPage() {
           </div>
         </div>
       </section>
+
+      {/* CTA Section */}
+      <CTASection />
     </>
   );
 }

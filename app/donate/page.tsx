@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { HeartHandshake, Heart, Gift, ArrowRight, CheckCircle, Building2, Copy, Check } from 'lucide-react';
 import StatsSection from '@/components/StatsSection';
+import CTASection from '@/components/CTASection';
 import { contactInfo } from '@/lib/data';
 
 const bankDetails = {
@@ -257,26 +258,7 @@ export default function DonatePage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-brand-black">
-        <div className="max-w-4xl mx-auto px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-4xl md:text-5xl font-black text-white mb-6">Ready to Make a Difference?</h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Contact us to learn more about donation options or to discuss a custom giving plan
-            </p>
-            <a
-              href={`mailto:${contactInfo.email}?subject=Donation Inquiry`}
-              className="inline-flex items-center justify-center gap-2 bg-white text-brand-black hover:bg-gray-100 font-bold px-10 py-5 rounded-lg text-lg transition-all hover:scale-105"
-            >
-              <HeartHandshake className="w-6 h-6" /> Get Started <ArrowRight className="w-5 h-5" />
-            </a>
-          </motion.div>
-        </div>
-      </section>
+      <CTASection />
     </>
   );
 }

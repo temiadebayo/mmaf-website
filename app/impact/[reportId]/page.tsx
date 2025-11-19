@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation';
 import { motion } from 'framer-motion';
 import { ArrowLeft, FileText, TrendingUp, Users, Calendar } from 'lucide-react';
 import Link from 'next/link';
+import CTASection from '@/components/CTASection';
 
 const reports: Record<string, {
   title: string;
@@ -183,6 +184,9 @@ export default function ImpactReportPage({ params }: { params: { reportId: strin
           </motion.div>
         </div>
       </section>
+
+      {/* CTA Section */}
+      <CTASection />
     </>
   );
 }

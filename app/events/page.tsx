@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { Calendar, MapPin, Clock } from 'lucide-react';
+import CTASection from '@/components/CTASection';
 
 const events = [
   {
@@ -73,6 +74,9 @@ export default function EventsPage() {
           </div>
         </div>
       </section>
+
+      {/* CTA Section */}
+      <CTASection />
     </>
   );
 }

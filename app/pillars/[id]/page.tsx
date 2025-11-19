@@ -3,6 +3,7 @@
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+import CTASection from '@/components/CTASection';
 import { pillarsData } from '@/lib/data';
 import * as Icons from 'lucide-react';
 
@@ -144,6 +145,9 @@ export default function PillarDetailPage({ params }: { params: { id: string } })
           </div>
         </div>
       </section>
+
+      {/* CTA Section */}
+      <CTASection />
     </>
   );
 }
